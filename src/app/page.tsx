@@ -2,7 +2,7 @@ import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesPreviewSection } from "@/components/home/ServicesPreviewSection";
-import { DeferredInteractiveExplorer } from "@/components/home/DeferredInteractiveExplorer";
+import { ArchitecturalVisionSection } from "@/components/home/ArchitecturalVisionSection";
 import { ProjectsSection } from "@/components/home/ProjectsSection";
 import { WhyChooseSection } from "@/components/home/WhyChooseSection";
 import { ClientsSection } from "@/components/home/ClientsSection";
@@ -21,8 +21,8 @@ export default function HomePage() {
       {/* 3. Our Services (Dark Charcoal Image-Led Cards) */}
       <ServicesPreviewSection />
 
-      {/* 4. Interactive 3D Architectural Explorer (Deferred from initial hydration) */}
-      <DeferredInteractiveExplorer />
+      {/* 4. Built With Vision. Executed With Precision. (Editorial Architectural Photography Showcase) */}
+      <ArchitecturalVisionSection />
 
       {/* 5. Featured Projects (Warm Ivory Portfolio with Working Filters) */}
       <ProjectsSection limit={6} />

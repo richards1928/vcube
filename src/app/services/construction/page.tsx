@@ -1,11 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Building, ShieldCheck, Ruler, FileText, Hammer } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, Building, ShieldCheck, Ruler, FileText, Hammer, HardHat } from "lucide-react";
 import { SITE_CONFIG } from "@/config/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { BuildingCanvas } from "@/components/3d/BuildingCanvas";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -70,12 +70,45 @@ export default function ConstructionServicePage() {
             </div>
           </ScrollReveal>
 
-          {/* 3D Structural Model Hero Display */}
+          {/* Premium Construction Photography Showcase */}
           <ScrollReveal direction="up" distance={25} scale={0.98} duration={0.95} delay={0.15} className="lg:col-span-6 relative">
-            <div className="relative w-full h-[450px] rounded-2xl border border-[#C6A36A]/30 bg-[#171A1D]/80 backdrop-blur-xl overflow-hidden shadow-2xl">
-              <BuildingCanvas modelType="apartment-g4" stage={2} exploded={false} lightingMode="dusk" interactive={true} />
-              <div className="absolute bottom-3 left-3 bg-[#090B0D]/80 border border-white/10 px-3 py-1.5 rounded-lg text-[10px] font-mono text-[#A0A4A8]">
-                <span className="text-[#C6A36A]">DEMONSTRATION MODEL:</span> Multi-Story RCC Structural Column Grid & Slabs
+            <div className="relative w-full h-[460px] sm:h-[500px] rounded-2xl border border-[#C6A36A]/30 bg-[#171A1D] overflow-hidden shadow-2xl group">
+              <Image
+                src="/images/service-construction.webp"
+                alt="Active RCC structural construction site in India with reinforced concrete columns, floor slabs, and precision rebar framing by Vcube Infra Projects"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090B0D] via-[#090B0D]/30 to-transparent" />
+
+              {/* Top Status Pill */}
+              <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full border border-white/10 bg-[#090B0D]/80 backdrop-blur-md px-3.5 py-1 text-xs font-mono text-[#C6A36A]">
+                <HardHat className="h-3.5 w-3.5 text-[#C6A36A]" />
+                <span>ON-SITE STRUCTURAL EXECUTION</span>
+              </div>
+
+              {/* Bottom Details Panel */}
+              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-[#090B0D]/85 backdrop-blur-md p-4">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <h4 className="text-sm font-medium text-[#F3F0E8] font-heading">
+                      Reinforced Cement Concrete (RCC) Structural Grid
+                    </h4>
+                    <p className="text-[11px] text-[#A0A4A8] mt-0.5">
+                      Fe550D TMT Rebar · M25/M30 Design Mix · Precision Shuttering Formwork
+                    </p>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <span className="text-[10px] font-mono text-[#C6A36A] uppercase tracking-wider block">
+                      Quality Protocol
+                    </span>
+                    <span className="text-xs font-mono text-[#F3F0E8] font-bold">
+                      IS 456 Certified
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </ScrollReveal>
