@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X, ArrowUpRight, MessageSquare } from "lucide-react";
 import gsap from "gsap";
 import { SITE_CONFIG, generateWhatsAppLink } from "@/config/site";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -84,26 +84,8 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between w-full">
-          {/* 1. LEFT: Official Brand Logo with Localized Ambient Contrast Illumination */}
-          <Link
-            href="/"
-            className="group relative flex items-center shrink-0 transition-opacity duration-300 hover:opacity-90 focus:outline-none py-1"
-            aria-label="Vcube Infra Projects Home"
-          >
-            {/* Localized subtle ambient contrast backlight (makes dark navy lettering crisply readable against dark hero) */}
-            <div
-              className="absolute inset-0 -inset-x-3.5 -inset-y-1.5 rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.85)_0%,_rgba(255,255,255,0.45)_40%,_transparent_75%)] pointer-events-none opacity-80 group-hover:opacity-95 transition-opacity duration-300"
-              aria-hidden="true"
-            />
-            <Image
-              src="/images/vcube-logo-transparent.webp"
-              alt="Vcube Infra Projects"
-              width={180}
-              height={50}
-              className="relative z-10 w-[145px] sm:w-[155px] lg:w-[180px] h-auto object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
-              priority
-            />
-          </Link>
+          {/* 1. LEFT: Official Brand Identity */}
+          <Logo variant="navbar" priority />
 
           {/* 2. RIGHT: Navigation Links + WhatsApp CTA + Mobile Menu Button */}
           <div className="flex items-center gap-6 xl:gap-8">
@@ -208,6 +190,15 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-b border-white/10 bg-[#090B0D]/98 px-6 py-6 backdrop-blur-2xl animate-in slide-in-from-top duration-300">
           <div className="flex flex-col space-y-4">
+            {/* Mobile Drawer Brand Header */}
+            <div className="pb-3 border-b border-white/10 flex items-center justify-between">
+              <div onClick={() => setMobileMenuOpen(false)}>
+                <Logo variant="drawer" />
+              </div>
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C6A36A]">
+                Navigation
+              </span>
+            </div>
             {navLinks.map((item) => {
               if (item.hasDropdown) {
                 return (

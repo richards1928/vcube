@@ -2,9 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { MessageSquare, Phone, Mail, MapPin, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG, generateWhatsAppLink } from "@/config/site";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   const { services, contact, whatsapp } = SITE_CONFIG;
@@ -23,25 +23,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Official Brand Logo */}
-            <Link
-              href="/"
-              className="group relative inline-flex items-center transition-opacity duration-300 hover:opacity-90 focus:outline-none py-1"
-              aria-label="Vcube Infra Projects Home"
-            >
-              {/* Localized subtle ambient contrast backlight */}
-              <div
-                className="absolute inset-0 -inset-x-3.5 -inset-y-1.5 rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.85)_0%,_rgba(255,255,255,0.45)_40%,_transparent_75%)] pointer-events-none opacity-80 group-hover:opacity-95 transition-opacity duration-300"
-                aria-hidden="true"
-              />
-              <Image
-                src="/images/vcube-logo-transparent.webp"
-                alt="Vcube Infra Projects"
-                width={180}
-                height={50}
-                className="relative z-10 w-[160px] sm:w-[180px] h-auto object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
-              />
-            </Link>
+            {/* Official Brand Identity */}
+            <Logo variant="footer" />
 
             <p className="text-sm text-[#A0A4A8] max-w-sm leading-relaxed font-light">
               From foundation to finishing, we create functional, beautiful and lasting spaces. Turnkey civil construction, tailored interior environments, and physical environmental branding.

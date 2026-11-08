@@ -97,7 +97,7 @@ export default function RootLayout({
         name: SITE_CONFIG.legalName,
         alternateName: SITE_CONFIG.name,
         url: SITE_CONFIG.url,
-        logo: `${SITE_CONFIG.url}/images/vcube-logo.png`,
+        logo: `${SITE_CONFIG.url}/images/vcube-logo-transparent.png`,
         description: SITE_CONFIG.description,
         telephone: SITE_CONFIG.whatsapp.displayNumber,
         email: SITE_CONFIG.contact.email,
