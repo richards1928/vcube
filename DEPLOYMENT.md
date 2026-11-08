@@ -11,7 +11,7 @@ This guide details the procedures for deploying the **Vcube Infra Projects** pro
 | **Framework** | Next.js 16.4.3 (App Router) |
 | **Runtime** | React 19.3.0 |
 | **Styling** | Tailwind CSS v4.x (Self-contained theme & zero external CSS CDNs) |
-| **3D Rendering** | Three.js 0.186.1, React Three Fiber 9.8.2, Drei 10.7.9 (Client-side dynamic lazy loading) |
+| **Visual Architecture** | High-performance photography-led editorial layouts (Zero WebGL/3D overhead, instant hydration) |
 | **Animations** | GSAP 3.15.0 & Lenis 1.3.27 smooth scrolling |
 | **Fonts** | 100% Self-Hosted Local WOFF2 (`Outfit`, `Inter`, `Cinzel`) via `next/font/local` |
 | **SEO & Meta** | Dynamic `sitemap.xml`, `robots.txt`, OpenGraph metadata, and Schema.org JSON-LD |
@@ -205,7 +205,7 @@ CMD ["npm", "start"]
 - [ ] Sitemap (`https://vcubeinfra.com/sitemap.xml`) and Robots (`https://vcubeinfra.com/robots.txt`) load properly.
 - [ ] WhatsApp CTA buttons redirect to valid client business WhatsApp phone number.
 - [ ] Contact email receives test enquiries.
-- [ ] 3D Interactive Apartment Explorer loads dynamically with smooth 60fps performance on mobile and desktop.
+- [ ] Editorial photography showcases load dynamically with smooth performance and instant hydration across all viewports.
 - [ ] Google Fonts are eliminated; self-hosted fonts load without external network requests.
 - [ ] CLS score verified at 0.000 across mobile and desktop audits.
 

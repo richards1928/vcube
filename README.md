@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vcube Infra Projects
 
-## Getting Started
+> **Turnkey Civil Construction · Architectural Interiors · Environmental Branding**  
+> Live Canonical Domain: [vcubeinfra.com](https://vcubeinfra.com)
 
-First, run the development server:
+A premium, photography-led corporate web application for **Vcube Infra Projects**, built on the Next.js 16 App Router, React 19, and Tailwind CSS v4.
 
+---
+
+## 🏗️ Core Disciplines & Services
+
+1. **Civil & Structural Engineering** (`/services/construction`):
+   - Turnkey civil execution, foundation raft casting, structural column grids, post-tensioned slabs, and IS 456-compliant site engineering for multi-story residential and commercial buildings.
+2. **Architectural Interiors & Fit-outs** (`/services/interiors`):
+   - Multi-tier gypsum false ceilings with warm cove lighting, bespoke joinery, Italian marble flooring, electrical MEP, flutter boards, and acoustic glazing.
+3. **Architectural Branding & Signage** (`/services/branding`):
+   - 3D illuminated dimensional entrance letters, PVDF-coated ACP facade cladding, architectural wayfinding totems, and solar control window films.
+
+---
+
+## ⚡ Technical Stack & Architecture
+
+- **Framework**: Next.js 16.4.3 (App Router with partial prefetching and static generation)
+- **Runtime**: React 19.3.0
+- **Styling**: Tailwind CSS v4.x (self-contained, zero external CSS runtime)
+- **Visuals**: High-resolution photography optimized with WebP, AVIF, and responsive `next/image`
+- **Animations**: GSAP 3.15 scroll-triggered reveals with reduced-motion support
+- **Typography**: 100% self-hosted local WOFF2 fonts (`Outfit`, `Inter`, `Cinzel`) via `next/font/local`
+- **SEO**: Dynamic `sitemap.xml`, `robots.txt`, OpenGraph metadata, and Schema.org JSON-LD
+
+---
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env.local`:
+```bash
+cp .env.example .env.local
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Production Build & Verification
+```bash
+# Typecheck
+npx tsc --noEmit
 
-## Learn More
+# Production Build (using Next.js Webpack engine)
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start Production Server
+npm run start -p 3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Automated Route Verification (all 9 routes HTTP 200)
+npm run test:routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 6-Run Lighthouse CLS & Performance Benchmark
+npm run benchmark:cls
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment to Production (`vcubeinfra.com`)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For complete deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### DNS Records:
+- **`A` Record**: Host `@` $\to$ `76.76.21.21` (TTL 3600)
+- **`CNAME` Record**: Host `www` $\to$ `cname.vercel-dns.com.` (TTL 3600)
+
+---
+
+## 📞 Official Contact
+
+- **Phone / WhatsApp**: [+91 90143 03773](https://wa.me/919014303773)
+- **Email**: [vcubeinfraprojects@gmail.com](mailto:vcubeinfraprojects@gmail.com)
+- **Location**: Hyderabad, Telangana, India
