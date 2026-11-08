@@ -84,18 +84,23 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between w-full">
-          {/* 1. LEFT: Company Brand Logo */}
+          {/* 1. LEFT: Official Brand Logo with Localized Ambient Contrast Illumination */}
           <Link
             href="/"
-            className="group flex items-center shrink-0 transition-opacity duration-300 hover:opacity-85 focus:outline-none"
+            className="group relative flex items-center shrink-0 transition-opacity duration-300 hover:opacity-90 focus:outline-none py-1"
             aria-label="Vcube Infra Projects Home"
           >
+            {/* Localized subtle ambient contrast backlight (makes dark navy lettering crisply readable against dark hero) */}
+            <div
+              className="absolute inset-0 -inset-x-3.5 -inset-y-1.5 rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.85)_0%,_rgba(255,255,255,0.45)_40%,_transparent_75%)] pointer-events-none opacity-80 group-hover:opacity-95 transition-opacity duration-300"
+              aria-hidden="true"
+            />
             <Image
               src="/images/vcube-logo-transparent.webp"
               alt="Vcube Infra Projects"
-              width={168}
-              height={47}
-              className="w-[130px] sm:w-[140px] lg:w-[168px] h-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
+              width={180}
+              height={50}
+              className="relative z-10 w-[145px] sm:w-[155px] lg:w-[180px] h-auto object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
               priority
             />
           </Link>
