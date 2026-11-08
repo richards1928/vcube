@@ -58,3 +58,4 @@ async function createHeroComparisons() {
 }
 
 createHeroComparisons().catch(console.error);
+
