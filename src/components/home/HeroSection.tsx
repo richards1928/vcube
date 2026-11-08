@@ -144,13 +144,13 @@ export function HeroSection() {
           className="hero-bg-scale relative w-full h-full origin-center transform-gpu"
         >
           <Image
-            src="/images/hero-residential-g4.webp"
-            alt="Contemporary residential apartment building development at dusk by Vcube Infra Projects"
+            src="/images/hero-architecture.webp"
+            alt="Contemporary architectural infrastructure development showcasing structural engineering, turnkey interiors, and physical branding by Vcube Infra Projects"
             fill
             priority
             sizes="100vw"
             quality={85}
-            className="object-cover object-center"
+            className="object-cover object-[70%_center] sm:object-center"
           />
 
           {/* Sophisticated Editorial Gradient Overlays */}
