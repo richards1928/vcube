@@ -31,7 +31,9 @@ export default function QueriesPage() {
         </ScrollReveal>
 
         {/* Interactive Query Tool */}
-        <ProjectQueriesSection />
+        <div className="border-t border-[#C6A36A]/20 pt-8">
+          <ProjectQueriesSection showHeading={false} embedded />
+        </div>
 
         {/* Direct Telephone and Working Hours Info */}
         <ScrollReveal direction="up" distance={25} stagger={0.1} duration={0.8} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-white/10 pt-12">

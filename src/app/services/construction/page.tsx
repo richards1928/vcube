@@ -75,7 +75,7 @@ export default function ConstructionServicePage() {
             <div className="relative w-full h-[460px] sm:h-[500px] rounded-2xl border border-[#C6A36A]/30 bg-[#171A1D] overflow-hidden shadow-2xl group">
               <Image
                 src="/images/service-construction.webp"
-                alt="Active RCC structural construction site in India with reinforced concrete columns, floor slabs, and precision rebar framing by Vcube Infra Projects"
+                alt="Active RCC structural construction site in India with reinforced concrete columns, floor slabs, and precision rebar framing"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -102,10 +102,10 @@ export default function ConstructionServicePage() {
                   </div>
                   <div className="shrink-0 text-right">
                     <span className="text-[10px] font-mono text-[#C6A36A] uppercase tracking-wider block">
-                      Quality Protocol
+                      Execution Protocol
                     </span>
                     <span className="text-xs font-mono text-[#F3F0E8] font-bold">
-                      IS 456 Certified
+                      Engineered RCC Framework
                     </span>
                   </div>
                 </div>

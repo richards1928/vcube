@@ -2,12 +2,23 @@
 
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MessageSquare, Phone, Mail, MapPin, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG, generateWhatsAppLink } from "@/config/site";
 import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
+  const pathname = usePathname();
   const { services, contact, whatsapp } = SITE_CONFIG;
+  const [currentYear, setCurrentYear] = React.useState<number>(2026);
+
+  React.useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
+  if (pathname?.startsWith("/design-preview")) {
+    return null;
+  }
 
   const handleGeneralWhatsApp = () => {
     const url = generateWhatsAppLink({});
@@ -154,7 +165,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A0A4A8]">
-          <p>© 2025 Vcube Infra Projects. All rights reserved.</p>
+          <p>© {currentYear} Vcube Infra Projects. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/" className="hover:text-[#F3F0E8] transition-colors">
               Home

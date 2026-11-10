@@ -99,7 +99,7 @@ export default function InteriorsServicePage() {
             <div className="relative w-full h-[460px] sm:h-[500px] rounded-2xl border border-[#C6A36A]/30 bg-[#171A1D] overflow-hidden shadow-2xl group">
               <Image
                 src="/images/service-interiors.webp"
-                alt="Contemporary luxury Indian interior fit-out featuring tiered false ceiling with warm cove LED lighting, custom teak joinery, and polished marble flooring by Vcube Infra Projects"
+                alt="Contemporary luxury Indian interior fit-out featuring tiered false ceiling with warm cove LED lighting, custom teak joinery, and polished marble flooring"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -73,7 +73,7 @@ export function ArchitecturalVisionSection({
             <div className="group relative w-full h-[380px] sm:h-[480px] lg:h-[580px] rounded-2xl overflow-hidden border border-white/10 bg-[#171A1D] shadow-2xl">
               <Image
                 src={mainImage}
-                alt="Contemporary Indian architectural development completed with precision structural execution and integrated environmental facade by Vcube Infra Projects"
+                alt="Contemporary commercial and residential architecture showcasing integrated structural execution and modern facade design"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -105,7 +105,7 @@ export function ArchitecturalVisionSection({
               <div className="group relative w-full h-[240px] sm:h-[280px] rounded-2xl overflow-hidden border border-[#C6A36A]/20 bg-[#171A1D] shadow-xl">
                 <Image
                   src={detailImage}
-                  alt="Architectural material junctions showcasing precision concrete, natural teak louvers, and structural joinery by Vcube"
+                  alt="Architectural material junctions showcasing engineered concrete finishes, natural teak louvers, and structural joinery"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"

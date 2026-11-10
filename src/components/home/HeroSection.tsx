@@ -145,7 +145,7 @@ export function HeroSection() {
         >
           <Image
             src="/images/hero-indian-morning.webp"
-            alt="Contemporary Indian architectural development under morning sunlight showcasing civil construction, turnkey interiors, and architectural branding by Vcube Infra Projects"
+            alt="Contemporary Indian architectural development under morning sunlight showcasing civil construction, turnkey interiors, and architectural branding"
             fill
             priority
             sizes="100vw"

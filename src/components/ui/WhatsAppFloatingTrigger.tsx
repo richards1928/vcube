@@ -1,13 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import { MessageSquare, ExternalLink, X } from "lucide-react";
 import { SITE_CONFIG, generateWhatsAppLink } from "@/config/site";
 
 export function WhatsAppFloatingTrigger() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<string>("construction");
   const [customQuery, setCustomQuery] = useState("");
+
+  if (pathname?.startsWith("/design-preview")) {
+    return null;
+  }
 
   const handleLaunchWhatsApp = () => {
     const url = generateWhatsAppLink({

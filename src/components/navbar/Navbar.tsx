@@ -13,6 +13,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -35,6 +36,44 @@ export function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Dismiss dropdowns on outside click/tap or route change
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        servicesDropdownRef.current &&
+        !servicesDropdownRef.current.contains(event.target as Node)
+      ) {
+        setServicesDropdownOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setServicesDropdownOpen(false);
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    setServicesDropdownOpen(false);
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  if (pathname?.startsWith("/design-preview")) {
+    return null;
+  }
 
   const handleWhatsAppEnquiry = () => {
     const url = generateWhatsAppLink({
@@ -96,13 +135,20 @@ export function Navbar() {
                   return (
                     <div
                       key={item.label}
+                      ref={servicesDropdownRef}
                       className="relative"
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
                     >
-                      <Link
-                        href={item.href}
-                        className={`flex items-center gap-1 text-[13px] tracking-wide font-normal transition-colors py-2 ${
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setServicesDropdownOpen((prev) => !prev);
+                        }}
+                        aria-expanded={servicesDropdownOpen}
+                        aria-haspopup="true"
+                        className={`flex items-center gap-1 text-[13px] tracking-wide font-normal transition-colors py-2 cursor-pointer ${
                           pathname.startsWith("/services")
                             ? "text-[#C6A36A]"
                             : "text-[#F3F0E8]/85 hover:text-[#C6A36A]"
@@ -114,17 +160,22 @@ export function Navbar() {
                             servicesDropdownOpen ? "rotate-180 text-[#C6A36A]" : ""
                           }`}
                         />
-                      </Link>
+                      </button>
 
                       {/* Clean Dropdown Panel */}
                       {servicesDropdownOpen && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-72 rounded-xl border border-white/10 bg-[#111315]/98 p-3 shadow-2xl backdrop-blur-xl animate-in fade-in slide-from-top-2">
+                        <div
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-72 rounded-xl border border-white/10 bg-[#111315]/98 p-3 shadow-2xl backdrop-blur-xl animate-in fade-in slide-from-top-2 z-50"
+                          role="menu"
+                        >
                           <div className="space-y-1">
                             {item.subItems?.map((sub) => (
                               <Link
                                 key={sub.label}
                                 href={sub.href}
+                                onClick={() => setServicesDropdownOpen(false)}
                                 className="group block rounded-lg p-2.5 transition-all hover:bg-white/5"
+                                role="menuitem"
                               >
                                 <div className="text-sm font-medium text-[#F3F0E8] group-hover:text-[#C6A36A] transition-colors">
                                   {sub.label}

@@ -1,9 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import { ContactSection } from "@/components/home/ContactSection";
-import { SITE_CONFIG } from "@/config/site";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { Phone, Mail, MapPin, Clock, MessageSquare, ShieldCheck } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -13,8 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const { contact, whatsapp } = SITE_CONFIG;
-
   return (
     <div className="w-full pt-28 pb-24 bg-[#090B0D] text-[#F3F0E8] architectural-grid">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -34,7 +29,9 @@ export default function ContactPage() {
         </ScrollReveal>
 
         {/* Contact Section Component */}
-        <ContactSection />
+        <div className="border-t border-[#C6A36A]/20 pt-8">
+          <ContactSection showHeading={false} embedded />
+        </div>
       </div>
     </div>
   );

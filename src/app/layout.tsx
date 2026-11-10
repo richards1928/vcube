@@ -103,10 +103,8 @@ export default function RootLayout({
         email: SITE_CONFIG.contact.email,
         address: {
           "@type": "PostalAddress",
-          streetAddress: `${SITE_CONFIG.contact.address.line1}, ${SITE_CONFIG.contact.address.line2}`,
           addressLocality: SITE_CONFIG.contact.address.city,
           addressRegion: SITE_CONFIG.contact.address.state,
-          postalCode: SITE_CONFIG.contact.address.pincode,
           addressCountry: "IN",
         },
         openingHours: "Mo-Sa 09:00-19:00",

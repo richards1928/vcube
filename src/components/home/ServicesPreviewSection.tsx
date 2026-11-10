@@ -20,7 +20,7 @@ export function ServicesPreviewSection() {
     {
       data: construction,
       href: "/services/construction",
-      image: "/images/service-construction.jpg",
+      image: "/images/service-construction.webp",
       number: "01",
       tagline: "CIVIL & STRUCTURAL ENGINEERING",
       description:
@@ -29,7 +29,7 @@ export function ServicesPreviewSection() {
     {
       data: interiors,
       href: "/services/interiors",
-      image: "/images/service-interiors.jpg",
+      image: "/images/service-interiors.webp",
       number: "02",
       tagline: "SPATIAL ARCHITECTURE & FIT-OUTS",
       description:
@@ -38,7 +38,7 @@ export function ServicesPreviewSection() {
     {
       data: branding,
       href: "/services/branding",
-      image: "/images/service-branding.jpg",
+      image: "/images/service-branding.webp",
       number: "03",
       tagline: "ENVIRONMENTAL & FACADE SIGNAGE",
       description:
@@ -167,7 +167,7 @@ export function ServicesPreviewSection() {
                   <div style={{ aspectRatio: "16 / 11" }} className="relative aspect-16-11 w-full overflow-hidden bg-[#0A0C0E]">
                     <Image
                       src={card.image}
-                      alt={`${data.title} by Vcube Infra Projects`}
+                      alt={`${data.title} services and architectural execution`}
                       width={600}
                       height={412}
                       sizes="(max-width: 1024px) 100vw, 33vw"

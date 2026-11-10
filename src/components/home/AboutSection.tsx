@@ -194,7 +194,7 @@ export function AboutSection() {
                 <div ref={imgInnerRef} className="relative w-full h-full">
                   <Image
                     src="/images/about-building.webp"
-                    alt="Modern independent residential house constructed by Vcube Infra Projects"
+                    alt="Contemporary multi-level independent residence showcasing architectural civil design and exterior finishes"
                     width={800}
                     height={1000}
                     sizes="(max-width: 1024px) 100vw, 50vw"

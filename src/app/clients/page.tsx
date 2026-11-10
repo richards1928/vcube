@@ -65,7 +65,7 @@ export default function ClientsPage() {
         </ScrollReveal>
 
         {/* Clients Section Display */}
-        <ClientsSection />
+        <ClientsSection theme="dark" showHeading={false} embedded />
       </div>
     </div>
   );

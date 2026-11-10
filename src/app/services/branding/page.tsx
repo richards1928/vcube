@@ -67,7 +67,7 @@ export default function BrandingServicePage() {
             <div className="relative w-full h-[460px] sm:h-[500px] rounded-2xl border border-[#C6A36A]/30 bg-[#171A1D] overflow-hidden shadow-2xl group">
               <Image
                 src="/images/service-branding.webp"
-                alt="Contemporary commercial building entrance featuring 3D illuminated architectural signage, brushed metal lettering, and precision ACP cladding by Vcube Infra Projects"
+                alt="Contemporary commercial building entrance featuring 3D illuminated architectural signage, brushed metal lettering, and precision ACP cladding"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

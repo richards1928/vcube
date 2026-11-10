@@ -32,7 +32,7 @@ export interface ProjectItem {
 export const SITE_CONFIG = {
   name: "Vcube Infra Projects",
   shortName: "Vcube",
-  legalName: "Vcube Infra Projects Pvt. Ltd.",
+  legalName: "Vcube Infra Projects",
   tagline: "FROM FOUNDATION TO FORM",
   description: "Specialists in residential apartment construction, multi-level independent houses, commercial structures, turnkey interiors, and architectural branding.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://vcubeinfra.com",
@@ -50,12 +50,11 @@ export const SITE_CONFIG = {
   contact: {
     email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "vcubeinfraprojects@gmail.com",
     address: {
-      line1: process.env.NEXT_PUBLIC_ADDRESS_LINE1 || "Vcube Infra Projects Corporate Office",
-      line2: process.env.NEXT_PUBLIC_ADDRESS_LINE2 || "Commercial District, Infrastructure Corridor",
       city: process.env.NEXT_PUBLIC_ADDRESS_CITY || "Hyderabad",
       state: process.env.NEXT_PUBLIC_ADDRESS_STATE || "Telangana",
       country: "India",
-      pincode: process.env.NEXT_PUBLIC_ADDRESS_PINCODE || "500081",
+      region: "Hyderabad & Regional Telangana",
+      consultationNotice: "Consultations, structural reviews, and site evaluations arranged by appointment.",
     },
     businessHours: "Monday – Saturday: 9:00 AM – 7:00 PM IST",
     workingDays: "Mon - Sat",
@@ -199,7 +198,7 @@ export const SITE_CONFIG = {
           category: "Surface & Floor Solutions",
           description: "Large-format vitrified tiles, Italian marble, engineered hardwood, epoxy industrial coatings, and luxury vinyl tile (LVT) installations.",
           details: [
-            "Italian marble honing, laying & diamond polishing",
+            "Natural stone installation, large-format tile laying & surface polishing",
             "Large-format slim porcelain slab installation",
             "Engineered natural hardwood and herringbone parquet",
             "Self-levelling epoxy and anti-static ESD flooring"
@@ -236,7 +235,7 @@ export const SITE_CONFIG = {
           description: "Stucco, Venetian plaster, smooth-coat PU finishes, textured masonry paint, and anti-fungal premium interior/exterior emulsions.",
           details: [
             "Multi-coat base putty & laser surface levelling",
-            "Italian Venetian plaster & micro-cement textures",
+            "Textured architectural wall finishes & specialized micro-coatings",
             "Polyurethane (PU) and duco satin spray finishes",
             "Low-VOC high-durability washable emulsions"
           ]
@@ -332,17 +331,17 @@ export const SITE_CONFIG = {
             "Rooftop & high-rise structural facade signage",
             "Freestanding architectural monument pylon signs",
             "Illuminated entrance gate fascia branding",
-            "Structural wind-load engineering and certification"
+            "Structural sub-framing design & weather-resistant mounting"
           ]
         },
         {
           id: "internal-signage",
           name: "Internal Signage",
-          description: "Architectural wayfinding directories, conference room designations, ADA tactile signs, department plaques, and elevator lobby cues.",
+          description: "Architectural wayfinding directories, conference room designations, room plaques, and elevator lobby cues.",
           details: [
             "Modular directional wayfinding and floor directories",
             "Magnetic interchangeable desk and room markers",
-            "Braille and tactile compliance identification",
+            "Architectural room identification & directional wayfinding",
             "Brushed metallic standoffs and tempered glass plaques"
           ]
         },
@@ -363,8 +362,8 @@ export const SITE_CONFIG = {
           category: "Architectural Performance Glazing",
           description: "High-rejection ceramic solar films, UV-shielding tints, spectrally selective thermal barriers, and glare reduction for glass facades.",
           details: [
-            "Infrared heat rejection up to 88%",
-            "99% UV radiation blocking for interior protection",
+            "Solar heat reduction with up to 88% IR rejection (manufacturer rating)",
+            "Up to 99% UV radiation blocking for interior protection",
             "Low-reflectivity neutral natural daylight preservation",
             "Building energy efficiency & HVAC load reduction"
           ]

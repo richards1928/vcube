@@ -7,7 +7,7 @@ const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
 
 function fetchRoute(p) {
   return new Promise((resolve, reject) => {
-    http.get(`http://127.0.0.1:${PORT}${p}`, (res) => {
+    http.get(`http://localhost:${PORT}${p}`, (res) => {
       resolve(res.statusCode);
     }).on('error', reject);
   });
@@ -71,7 +71,7 @@ async function main() {
       console.log(`Running Mobile Lighthouse Audit #${i}...`);
       console.log(`========================================`);
       const outPath = `./cls-mobile-run-${i}.json`;
-      const cmd = `npx lighthouse http://127.0.0.1:${PORT}/ --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=${outPath} --only-categories=performance --form-factor=mobile --throttling-method=simulate`;
+      const cmd = `npx lighthouse http://localhost:${PORT}/ --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=${outPath} --only-categories=performance --form-factor=mobile --throttling-method=simulate`;
       execSync(cmd, { stdio: 'inherit' });
 
       const data = JSON.parse(fs.readFileSync(outPath, 'utf8'));
@@ -107,7 +107,7 @@ async function main() {
       console.log(`Running Desktop Lighthouse Audit #${i}...`);
       console.log(`========================================`);
       const outPath = `./cls-desktop-run-${i}.json`;
-      const cmd = `npx lighthouse http://127.0.0.1:${PORT}/ --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=${outPath} --only-categories=performance --preset=desktop`;
+      const cmd = `npx lighthouse http://localhost:${PORT}/ --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=${outPath} --only-categories=performance --preset=desktop`;
       execSync(cmd, { stdio: 'inherit' });
 
       const data = JSON.parse(fs.readFileSync(outPath, 'utf8'));

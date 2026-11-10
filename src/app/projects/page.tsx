@@ -44,8 +44,8 @@ export default function ProjectsPage() {
         </ScrollReveal>
 
         {/* Full Portfolio with Working Filters */}
-        <div className="border-t border-[#C6A36A]/20 pt-8">
-          <ProjectsSection />
+        <div className="border-t border-[#C6A36A]/20 pt-6">
+          <ProjectsSection theme="dark" showHeading={false} embedded />
         </div>
 
         {/* Bottom Banner */}

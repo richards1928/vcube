@@ -12,6 +12,7 @@ const routes = [
   '/clients',
   '/queries',
   '/contact',
+  '/design-preview',
   '/robots.txt',
   '/sitemap.xml',
 ];
